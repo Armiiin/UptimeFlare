@@ -139,6 +139,6 @@ const workerConfig: WorkerConfig = {
     color: 'blue',
   },*/ 
 ]
-
+}
 // Don't forget this, otherwise compilation fails.
 export { pageConfig, workerConfig, maintenances }
