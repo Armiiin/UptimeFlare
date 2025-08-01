@@ -122,9 +122,9 @@ const workerConfig: WorkerConfig = {
 // Also, related downtime notifications will be skipped (if any)
 // Of course, you can leave it empty if you don't need this feature
 // const maintenances: MaintenanceConfig[] = []
-/*  const maintenances: MaintenanceConfig[] = [
+  const maintenances: MaintenanceConfig[] = [
   {
-    // [Optional] Monitor IDs to be affected by this maintenance
+/*    // [Optional] Monitor IDs to be affected by this maintenance
     monitors: ['foo_monitor', 'bar_monitor'],
     // [Optional] default to "Scheduled Maintenance" if not specified
     title: 'Test Maintenance',
