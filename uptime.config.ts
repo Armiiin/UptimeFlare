@@ -1,4 +1,9 @@
 import { MaintenanceConfig, PageConfig, WorkerConfig } from './types/config'
+const aiApiToken = process.env.AI_API_TOKEN;
+
+if (!aiApiToken) {
+  throw new Error('API_TOKEN is not defined!');
+}
 
 const pageConfig: PageConfig = {
   // Title for your status page
@@ -163,7 +168,7 @@ const workerConfig: WorkerConfig = {
       // [OPTIONAL] headers to be sent
       headers: {
         'User-Agent': 'Uptimeflare',
-        'g4f-api-key': ${AI_API_TOKEN}
+        'g4f-api-key': $(aiApiToken)
         //Authorization: 'Bearer YOUR_TOKEN_HERE',
       },
       // [OPTIONAL] body to be sent
@@ -171,7 +176,7 @@ const workerConfig: WorkerConfig = {
       // [OPTIONAL] if specified, the response must contains the keyword to be considered as operational.
       //responseKeyword: 'success',
       // [OPTIONAL] if specified, the response must NOT contains the keyword to be considered as operational.
-      responseForbiddenKeyword: 'bad gateway',
+      responseForbiddenKeyword: 'bad gateway'
       // [OPTIONAL] if specified, will call the check proxy to check the monitor, mainly for geo-specific checks
       // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Check-proxy-setup before setting this value
       // currently supports `worker://` and `http(s)://` proxies
