@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  env: {
+    AI_API_TOKEN: process.env.AI_API_TOKEN
+  },
 }
-
-module.exports = nextConfig
 
 if (process.env.NODE_ENV === 'development') {
   const { setupDevBindings } = require('@cloudflare/next-on-pages/next-dev')
@@ -16,3 +17,5 @@ if (process.env.NODE_ENV === 'development') {
     },
   })
 }
+
+module.exports = nextConfig
