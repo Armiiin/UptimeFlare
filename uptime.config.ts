@@ -168,7 +168,7 @@ const workerConfig: WorkerConfig = {
       // [OPTIONAL] headers to be sent
       headers: {
         'User-Agent': 'Uptimeflare',
-        'g4f-api-key': $(aiApiToken)
+        'g4f-api-key': '$(aiApiToken)'
         //Authorization: 'Bearer YOUR_TOKEN_HERE',
       },
       // [OPTIONAL] body to be sent
