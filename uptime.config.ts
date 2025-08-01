@@ -60,10 +60,10 @@ const workerConfig: WorkerConfig = {
 /*    checkProxy: 'https://xxx.example.com OR worker://weur',
       // [OPTIONAL] if true, the check will fallback to local if the specified proxy is down
       checkProxyFallback: true,
-    }, */
+    },
     // Example TCP Monitor
     {
-/*       id: 'test_tcp_monitor',
+      id: 'test_tcp_monitor',
       name: 'Example TCP Monitor',
       // `method` should be `TCP_PING` for tcp monitors
       method: 'TCP_PING',
