@@ -121,7 +121,7 @@ const workerConfig: WorkerConfig = {
 // During maintenance, an alert will be shown at status page
 // Also, related downtime notifications will be skipped (if any)
 // Of course, you can leave it empty if you don't need this feature
- const maintenances: MaintenanceConfig[] = []
+// const maintenances: MaintenanceConfig[] = []
 /*  const maintenances: MaintenanceConfig[] = [
   {
     // [Optional] Monitor IDs to be affected by this maintenance
@@ -137,8 +137,8 @@ const workerConfig: WorkerConfig = {
     end: '2025-04-30T00:00:00+08:00',
     // [Optional] color of the maintenance alert at status page, default to "yellow"
     color: 'blue',
-  }, 
-]*/
+  },*/ 
+]
 
 // Don't forget this, otherwise compilation fails.
 export { pageConfig, workerConfig, maintenances }
