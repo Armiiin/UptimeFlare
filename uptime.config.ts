@@ -61,7 +61,7 @@ const workerConfig: WorkerConfig = {
       // [OPTIONAL] if specified, the response must contains the keyword to be considered as operational.
       //responseKeyword: 'success',
       // [OPTIONAL] if specified, the response must NOT contains the keyword to be considered as operational.
-      responseForbiddenKeyword: 'bad gateway',
+      responseForbiddenKeyword: 'bad gateway'
       // [OPTIONAL] if specified, will call the check proxy to check the monitor, mainly for geo-specific checks
       // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Check-proxy-setup before setting this value
       // currently supports `worker://` and `http(s)://` proxies
@@ -99,7 +99,7 @@ const workerConfig: WorkerConfig = {
       // [OPTIONAL] if specified, the response must contains the keyword to be considered as operational.
       //responseKeyword: 'success',
       // [OPTIONAL] if specified, the response must NOT contains the keyword to be considered as operational.
-      responseForbiddenKeyword: 'bad gateway',
+      responseForbiddenKeyword: 'bad gateway'
       // [OPTIONAL] if specified, will call the check proxy to check the monitor, mainly for geo-specific checks
       // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Check-proxy-setup before setting this value
       // currently supports `worker://` and `http(s)://` proxies
@@ -137,7 +137,7 @@ const workerConfig: WorkerConfig = {
       // [OPTIONAL] if specified, the response must contains the keyword to be considered as operational.
       //responseKeyword: 'success',
       // [OPTIONAL] if specified, the response must NOT contains the keyword to be considered as operational.
-      responseForbiddenKeyword: 'bad gateway',
+      responseForbiddenKeyword: 'bad gateway'
       // [OPTIONAL] if specified, will call the check proxy to check the monitor, mainly for geo-specific checks
       // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Check-proxy-setup before setting this value
       // currently supports `worker://` and `http(s)://` proxies
