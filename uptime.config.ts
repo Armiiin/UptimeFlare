@@ -137,8 +137,8 @@ const workerConfig: WorkerConfig = {
     end: '2025-04-30T00:00:00+08:00',
     // [Optional] color of the maintenance alert at status page, default to "yellow"
     color: 'blue',
-  }, */
-]
+  }, 
+]*/
 
 // Don't forget this, otherwise compilation fails.
 export { pageConfig, workerConfig, maintenances }
