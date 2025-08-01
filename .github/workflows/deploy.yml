@@ -41,6 +41,7 @@ jobs:
 
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          AI_API_TOKEN: ${{ secrets.AI_API_TOKEN }}
 
       # This is a temporary workaround to fix issue #13
       # On a new Cloudflare account, the terraform apply will fail with `workers.api.error.subdomain_required`
@@ -63,6 +64,7 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ steps.fetch_account_id.outputs.account_id }}
+          AI_API_TOKEN: ${{ secrets.AI_API_TOKEN }}
 
       - name: Install packages
         run: |
@@ -98,6 +100,7 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ steps.fetch_account_id.outputs.account_id }}
+          AI_API_TOKEN: ${{ secrets.AI_API_TOKEN }}
 
       - name: Deploy using Terraform
         # As we don't save terraform state somewhere, we need to import the existing resources
@@ -119,6 +122,7 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           TF_VAR_CLOUDFLARE_ACCOUNT_ID: ${{ steps.fetch_account_id.outputs.account_id }}
+          AI_API_TOKEN: ${{ secrets.AI_API_TOKEN }}
 
       # Terraform Cloudflare provider 4.x doesn't support durable objects, provider 5.x has unresolved issues blocking the deployment. (cloudflare/terraform-provider-cloudflare#5412)
       # So I have to manually add durable objects bindings here.
@@ -153,6 +157,7 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ steps.fetch_account_id.outputs.account_id }}
+          AI_API_TOKEN: ${{ secrets.AI_API_TOKEN }}
 
       # Currently Terraform Cloudflare provider doesn't support direct upload, use wrangler to upload instead.
       - name: Upload pages
@@ -161,3 +166,4 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ steps.fetch_account_id.outputs.account_id }}
+          AI_API_TOKEN: ${{ secrets.AI_API_TOKEN }}
